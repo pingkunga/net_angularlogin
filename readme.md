@@ -53,27 +53,29 @@ dotnet ef database update
 #you will see database file identity.db at netangularlogin folder
 ```
 
-#ref
-"SQLite Error 1: 'no such table: __EFMigrationsHistory'."
-https://stackoverflow.com/questions/73508902/entity-framework-sqlite-error-1-no-such-table-efmigrationshistory
-https://github.com/dotnet/efcore/issues/9842
+* ERROR
+  - SQLite Error 1: 'no such table: __EFMigrationsHistory'."
+    - https://stackoverflow.com/questions/73508902/entity-framework-sqlite-error-1-no-such-table-efmigrationshistory
+    - https://github.com/dotnet/efcore/issues/9842
 
 
 #Create Controller Complete
+- Create Controller
 
-#Run Test
-
+#How to Run
+Note: In dotnet 7 add -lp --launch-profile 
+```shell
 dotnet run --launch-profile https
-
+```
 if you see this error 
-'''
+```shell
 warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
       Failed to determine the https port for redirect.
-'''
+```
 Fix it by  https://learn.microsoft.com/en-us/answers/questions/1297509/how-to-fix-this-error-warn-microsoft-aspnetcore-ht
 but it is feature https://github.com/dotnet/aspnetcore/issues/44722#issuecomment-1290621757
 
 # Test URL
 https://localhost:7060/swagger/index.html
 
-# localhost:7060 >> From launchSettings.json profile https
+Note: localhost:7060 >> From launchSettings.json profile https
